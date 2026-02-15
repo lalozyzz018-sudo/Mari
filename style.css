@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #ff5f9e, #ff8fb1);
+    font-family: Arial;
+    overflow: hidden;
+}
+
+/* 🔥 Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ff5f9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    animation: fadeOut 2s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* 💌 Carta */
+.card {
+    width: 350px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #f5e6d3;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 1s;
+}
+
+.oculto {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.card.mostrar {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.arbol {
+    width: 100%;
+}
+
+/* ❤️ Corazones */
+.corazones {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.corazon {
+    position: absolute;
+    font-size: 20px;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% { transform: translateY(-10vh); }
+    100% { transform: translateY(100vh); }
+}
+
+/* botón */
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
